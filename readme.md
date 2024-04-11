@@ -91,6 +91,8 @@ your project folder i.e `email_client`.
 
 ## STEPS TO RUN THE PROJECT
 
+### Part 1
+
 1. Clone the repository using command.
 
 ```
@@ -135,3 +137,13 @@ python fetch_email.py 10
 in the database. 
 
 
+### Part 2
+
+1. Update the rules json. In the format given as example in readme.
+2. Run the application.
+```
+python process_email.py
+```
+3. `process_email.py` will filter downloaded emails based on the rules. And, perform the requested action.
+
+4. Compare the expected result with the changes that have happened in your gmail.
