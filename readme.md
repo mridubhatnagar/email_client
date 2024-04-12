@@ -23,6 +23,12 @@
     }
 ]
 ```
+## IMPORTANT NOTE
+
+1. Possible values of key `field` inside rules list - `subject`, `mail_to`,
+`mail_from`, `email_received_date`, `body`.
+2. Possible values for key `condition` - `contains`, `does not contains`, `equal`, `does not equal` when field is string type.
+3. Possible values for key `condition` when field is `email_received_date` - `equal`, `does not equal`, `greater than`, `less than`.    
 
 ## STEPS TO GENERATE CREDENTIALS TO ACCESS GMAIL API
 
@@ -121,25 +127,46 @@ By running the command.
 pip install -r requirements.txt
 ```
 
-5. Initialize SQLite database. File `fetch_email.py` accepts `init` as
+5. Run the below command. 
+
+```
+export ENV=local
+```
+
+6. Initialize SQLite database. File `fetch_email.py` accepts `init` as
 command line argument. This command will initialize the database. 
 
 ```
 python fetch_email.py init
 ```
 
-6. Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
+7. Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
 
 ```
 python fetch_email.py 10
 ```
-7. Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
+8. Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
 in the database. 
 
 
 ### Part 2
 
-1. Update the rules json. In the format given as example in readme.
+1. Update the rules json. In the format as given below.
+
+```
+[
+    {
+        "select": "all",
+        "rules": [{
+            "field": "subject",
+            "value": "Assignment",
+            "condition": "contains"
+        }],
+        "action": {"command": "mark", "value": "unread"}
+    }
+]
+```
+
 2. Run the application.
 ```
 python process_email.py
