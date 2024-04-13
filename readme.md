@@ -35,7 +35,8 @@
 
 ### Part 1
 
-0. Fetch  OAuth Credentials from console.cloud.google.com. [Credentials](credentials.md)
+0. Fetch  OAuth Credentials from console.cloud.google.com. Click on the link
+to see step by step how to access [credentials](credentials.md) from google.
 
 1. Clone the repository using command.
 
