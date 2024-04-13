@@ -46,23 +46,24 @@
 
 ### Part 1
 
-1. Fetch  OAuth Credentials from console.cloud.google.com. Click on the link
+- Fetch  OAuth Credentials from console.cloud.google.com. Click on the link
 to see step by step how to access [credentials](credentials.md) from google.
 
-2. Clone the repository using command.
+
+- Clone the repository using command.
 
 ```
 git clone git@github.com:mridubhatnagar/email_client.git
 
 ```
 
-3. Go inside the project repo email_client. 
+- Go inside the project repo email_client. 
 
 ```
 cd email_client
 ```
 
-4. Create and activate the virtual environment.
+- Create and activate the virtual environment.
 `emailclient` is the virtual environment name. You can give any name of your choice.
 
 ```
@@ -70,38 +71,39 @@ python3 -m venv ~/emailclient
 source ~/emailclient/bin/activate
 ```
 
-5. Once environment is activated. Install all the needed dependencies.
+- Once environment is activated. Install all the needed dependencies.
 By running the command.
 
 ```
 pip install -r requirements.txt
 ```
 
-6. Run the below command. 
+- Run the below command. 
 
 ```
 export ENV=local
 ```
 
-7. Initialize SQLite database. File `fetch_email.py` accepts `init` as
+- Initialize SQLite database. File `fetch_email.py` accepts `init` as
 command line argument. This command will initialize the database. 
 
 ```
 python fetch_email.py init
 ```
 
-8. Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
+- Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
 
 ```
 python fetch_email.py 10
 ```
-9. Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
+
+- Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
 in the database. 
 
 
 ### Part 2
 
-1. Update the rules json. In the format as given below.
+- Update the rules json. In the format as given below.
 
 ```
 [
@@ -117,13 +119,16 @@ in the database.
 ]
 ```
 
-2. Run the application.
+- Run the application.
+
 ```
 python process_email.py
 ```
-3. `process_email.py` will filter downloaded emails based on the rules. And, perform the requested action.
 
-4. Compare the expected result with the changes that have happened in your gmail.
+- `process_email.py` will filter downloaded emails based on the rules. And, perform the requested action.
+
+
+- Compare the expected result with the changes that have happened in your gmail.
 
 
 ## STEPS TO RUN TEST CASES
