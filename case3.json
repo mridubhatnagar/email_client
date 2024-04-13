@@ -1,0 +1,13 @@
+[{ "select":"all", 
+      "rules": [  {"field":"subject",
+                   "condition":"contains",
+                   "value":"trek"
+                  },
+                  {"field":"subject",
+                   "condition":"contains",
+                   "value":"bugyal"
+                  }
+               ], 
+      "action": { "command":"move message", "value":"dayara bugyal"}  
+  }
+]

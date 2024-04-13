@@ -1,0 +1,13 @@
+[{ "select":"any", 
+      "rules": [  {"field":"subject",
+                   "condition":"contains",
+                   "value":"trek"
+                  },
+                  {"field":"subject",
+                   "condition":"contains",
+                   "value":"Scuba"
+                  }
+               ], 
+      "action": { "command":"mark", "value":"unread"}  
+  }
+]

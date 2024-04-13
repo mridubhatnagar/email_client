@@ -1,0 +1,17 @@
+[{ "select":"any", 
+      "rules": [  {"field":"mail_from",
+                   "condition":"contains",
+                   "value":"team4adventure.com"
+                  }
+               ], 
+      "action": { "command":"move message", "value":"team4adventure"}  
+  },
+  { "select":"any", 
+      "rules": [  {"field":"mail_from",
+                   "condition":"equal to",
+                   "value":"sales@team4adventure.com"
+                  }
+               ], 
+      "action": { "command":"move message", "value":"sales_team4adventure"}  
+  }
+]

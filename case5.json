@@ -1,0 +1,11 @@
+[{ "select":"all", 
+      "rules": [  {"field":"email_received_date",
+                   "condition":"less than",
+                   "value":"1",
+                   "unit": "days"
+                  }
+               ], 
+      "action": { "command":"move message", "value":"INBOX"}  
+  }
+]
+
