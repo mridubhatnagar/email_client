@@ -30,7 +30,7 @@ def validate_rules(rules_group):
                     if "unit" not in rule:
                         print(f"DATE_RULE_ERROR: 'unit' dictionary key missing for field email_received_date, group: {group_ctr}, rule: {rule_ctr}")
                         return False
-                    if rule["condition"] not in ["equal to", "does not equal", "greater than", "less than"]:
+                    if rule["condition"] not in ["greater than", "less than"]:
                         print(f"CONDITION_ERROR: mentioned 'condition' is not valid, group: {group_ctr}, rule: {rule_ctr}")
                         return False
                 elif rule["condition"] not in ["contains", "does not contains", "equal to", "does not equal"]:
