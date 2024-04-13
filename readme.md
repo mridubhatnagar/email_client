@@ -1,4 +1,4 @@
-# EMAIL CLIENT
+# EMAIL ORGANIZER
 
 ## Features
 
