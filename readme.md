@@ -46,23 +46,23 @@
 
 ### Part 1
 
-0. Fetch  OAuth Credentials from console.cloud.google.com. Click on the link
+1. Fetch  OAuth Credentials from console.cloud.google.com. Click on the link
 to see step by step how to access [credentials](credentials.md) from google.
 
-1. Clone the repository using command.
+2. Clone the repository using command.
 
 ```
 git clone git@github.com:mridubhatnagar/email_client.git
 
 ```
 
-2. Go inside the project repo email_client. 
+3. Go inside the project repo email_client. 
 
 ```
 cd email_client
 ```
 
-3. Create and activate the virtual environment.
+4. Create and activate the virtual environment.
 `emailclient` is the virtual environment name. You can give any name of your choice.
 
 ```
@@ -70,32 +70,32 @@ python3 -m venv ~/emailclient
 source ~/emailclient/bin/activate
 ```
 
-4. Once environment is activated. Install all the needed dependencies.
+5. Once environment is activated. Install all the needed dependencies.
 By running the command.
 
 ```
 pip install -r requirements.txt
 ```
 
-5. Run the below command. 
+6. Run the below command. 
 
 ```
 export ENV=local
 ```
 
-6. Initialize SQLite database. File `fetch_email.py` accepts `init` as
+7. Initialize SQLite database. File `fetch_email.py` accepts `init` as
 command line argument. This command will initialize the database. 
 
 ```
 python fetch_email.py init
 ```
 
-7. Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
+8. Once the database is created. Run `fetch_email.py` followed by the count of emails you wish to download. 
 
 ```
 python fetch_email.py 10
 ```
-8. Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
+9. Using any SQLite desktop client. You would be able to verify database and table has got created. And, requested number of emails would have got inserted
 in the database. 
 
 
