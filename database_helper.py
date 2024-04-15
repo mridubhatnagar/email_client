@@ -1,7 +1,8 @@
-import sqlalchemy as db
 import datetime
-from dateutil.relativedelta import relativedelta
 import os
+from dateutil.relativedelta import relativedelta
+import sqlalchemy as db
+
 
 DATABASE_NAME = 'email'
 TABLE_NAME = 'emails'

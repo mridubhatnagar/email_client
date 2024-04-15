@@ -1,15 +1,16 @@
-import sqlalchemy as db
+import json
+from sys import argv 
 
+import sqlalchemy as db
 from googleapiclient.discovery import build 
 from google_auth_oauthlib.flow import InstalledAppFlow 
 from google.auth.transport.requests import Request 
-import pickle
+
+import database_helper 
 from auth import connect_to_gmail_api
 from constants import MODIFY_SCOPE
-import json
-import database_helper 
 from utils import validate_rules
-from sys import argv 
+
 
 
 service = connect_to_gmail_api(MODIFY_SCOPE, "credentials.json")

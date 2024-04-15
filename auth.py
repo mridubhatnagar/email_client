@@ -1,9 +1,9 @@
-# import the required libraries 
+import pickle 
+import os 
+ 
 from googleapiclient.discovery import build 
 from google_auth_oauthlib.flow import InstalledAppFlow 
 from google.auth.transport.requests import Request 
-import pickle 
-import os 
 
 
 def connect_to_gmail_api(SCOPES, filename):

@@ -1,15 +1,12 @@
-import os.path 
 import base64 
-import email 
 from sys import argv 
 import re
-import datetime
 import json 
+
 from auth import connect_to_gmail_api
 import database_helper
 from database_helper import db, engine
 from constants import READ_ONLY_SCOPE
-import sys
 from utils import format_received_date
 # Define the SCOPES. If modifying it, delete the token.pickle file. 
 
