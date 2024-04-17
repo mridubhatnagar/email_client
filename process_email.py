@@ -2,9 +2,6 @@ import json
 from sys import argv 
 
 import sqlalchemy as db
-from googleapiclient.discovery import build 
-from google_auth_oauthlib.flow import InstalledAppFlow 
-from google.auth.transport.requests import Request 
 
 import database_helper 
 from auth import connect_to_gmail_api
